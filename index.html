@@ -9,7 +9,9 @@
   <meta property="og:description" content="Van nieuwe prospects tot extra salescapaciteit. Link2Group bouwt de commerciële infrastructuur om B2B-groei schaalbaar te maken.">
   <meta property="og:type" content="website">
   <title>Link2Group: B2B sales, gebouwd voor groei</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0d10'/%3E%3Cpath d='M18 20h28v7H25v10h18v7H25v10h-7V20z' fill='white'/%3E%3Cpath d='M36 20h10v34H36z' fill='%232f6fed'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -65,7 +67,7 @@
       border:1px solid rgba(47,111,237,.28);
       background:rgba(47,111,237,.08);
       color:#8eaff9;padding:7px 11px;border-radius:999px;
-      font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+      font-size:11px;font-weight:700;letter-spacing:.2px;
       margin-bottom:24px;
     }
     .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--blue);display:block}
@@ -107,7 +109,7 @@
     .tag{
       width:max-content;padding:5px 9px;border-radius:5px;
       background:rgba(47,111,237,.1);color:#8eaff9;
-      font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;
+      font-size:10px;font-weight:800;letter-spacing:.2px;
     }
     .solution h2{font-size:34px;letter-spacing:-1.5px;margin-top:24px}
     .solution h2 span{color:var(--blue)}
@@ -139,7 +141,11 @@
       padding:74px 0;
     }
     .bridge-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
-    .section-label{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--blue-soft);text-transform:uppercase}
+    .section-label{font-size:15px;font-weight:700;letter-spacing:-.2px;color:var(--text)}
+    .closing-mail{max-width:580px;margin:22px auto 0!important;font-size:13px!important;color:#737b87!important}
+    .closing-mail a{color:var(--blue-soft);text-decoration:underline;text-underline-offset:3px}
+    .bridge-photo{margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+    .bridge-photo img{display:block;width:100%;height:250px;object-fit:cover;object-position:center 42%}
     .bridge h2{font-size:42px;line-height:1.05;letter-spacing:-1.8px;margin-top:14px}
     .bridge p{font-size:16px;color:var(--muted);line-height:1.8}
     .bridge-copy{margin-top:18px}
@@ -196,7 +202,7 @@
         <a class="nav-link" href="#bedrijven">Onze bedrijven</a>
         <a class="nav-link" href="#verdiepen">Verdiepen</a>
           <a class="nav-link" href="#waarom">Waarom Link2Group</a>
-        <a class="nav-cta" href="mailto:info@link2leads.nl">Contact</a>
+        <a class="nav-cta" href="https://www.link2leads.nl/#contact" rel="noopener" target="_blank">Contact</a>
       </div>
     </nav>
 
@@ -205,7 +211,7 @@
         <div class="eyebrow"><i></i> B2B sales infrastructure</div>
         <h1>Meer gesprekken.<br><span class="accent">Meer capaciteit.</span></h1>
         <p>Link2Group bouwt commerciële systemen voor B2B-bedrijven. Van het vinden van nieuwe prospects tot de capaciteit om ze structureel op te volgen.</p>
-        <p class="hero-note">Twee bedrijven. Eén doel: groei minder afhankelijk maken van toeval.</p>
+        <p class="hero-note">Twee bedrijven met hetzelfde doel: groei minder afhankelijk maken van toeval.</p>
       </section>
 
       <section class="solutions" id="bedrijven">
@@ -256,28 +262,30 @@
       <section class="bridge" id="waarom">
         <div class="bridge-grid">
           <div>
-            <div class="section-label">Het fundament</div>
-            <h2>Van eerste prospect tot actieve salescapaciteit.</h2>
+            <figure class="bridge-photo">
+              <img src="/assets/img/team.jpg" alt="Demi en Anne-Roos, de oprichters van Link2Group" width="900" height="520" loading="lazy">
+            </figure>
+            <h2>Van eerste prospect tot <span class="accent">actieve salescapaciteit</span>.</h2>
             <p class="bridge-copy">De meeste B2B-bedrijven lopen op een van twee dingen vast: te weinig nieuwe gesprekken, of te weinig capaciteit om de gesprekken die er zijn op te volgen. Link2Group bouwt aan beide kanten van dat probleem, zodat je niet bij twee partijen hoeft aan te kloppen.</p>
           </div>
           <div class="flow">
             <div class="flow-card">
-              <div class="flow-num">01 · VINDEN</div>
+              <div class="flow-num">01 · Vinden</div>
               <h3>Nieuwe markt</h3>
               <p>Link2Leads creëert een structurele instroom van relevante B2B-reacties.</p>
             </div>
             <div class="flow-card">
-              <div class="flow-num">02 · OPVOLGEN</div>
+              <div class="flow-num">02 · Opvolgen</div>
               <h3>Meer capaciteit</h3>
               <p>Link2Talent levert flexibele salescapaciteit om leads en pipeline actief op te volgen.</p>
             </div>
             <div class="flow-card">
-              <div class="flow-num">03 · OPSCHALEN</div>
+              <div class="flow-num">03 · Opschalen</div>
               <h3>Geen vaste bottleneck</h3>
               <p>Capaciteit en acquisitie kunnen meegroeien met wat je commercieel nodig hebt.</p>
             </div>
             <div class="flow-card">
-              <div class="flow-num">04 · SYSTEMEN</div>
+              <div class="flow-num">04 · Systemen</div>
               <h3>Gebouwd om te draaien</h3>
               <p>Geen losse freelancers of losse campagnes, maar processen die schaalbaar zijn ingericht.</p>
             </div>
@@ -286,10 +294,10 @@
       </section>
 
       <section class="closing">
-        <div class="section-label">Link2Group</div>
-        <h2>Sales hoeft geen bottleneck te zijn.</h2>
+        <h2>Sales hoeft <span class="accent">geen bottleneck</span> te zijn.</h2>
         <p>Of je nu meer gesprekken nodig hebt of meer capaciteit om ze op te volgen: we helpen je bepalen welke kant als eerste aandacht nodig heeft.</p>
-        <a class="button" href="mailto:info@link2leads.nl">Neem contact op <span>→</span></a>
+        <a class="button" href="https://www.link2leads.nl/#contact" rel="noopener" target="_blank">Neem contact op <span>→</span></a>
+        <p class="closing-mail">Liever direct mailen? <a href="mailto:info@link2leads.nl">info@link2leads.nl</a> of bel <a href="tel:+31850805381">085 080 5381</a>.</p>
       </section>
     </main>
 
