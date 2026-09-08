@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#090b0f;
@@ -50,7 +50,8 @@
       z-index:10;
     }
     .brand{font-size:20px;font-weight:800;letter-spacing:-.7px}
-    .brand .two,.accent{color:var(--blue)}
+    .brand .two{color:var(--blue)}
+    .accent{color:var(--blue-soft)}
     .nav-right{display:flex;align-items:center;gap:28px}
     .nav-link{font-size:14px;color:var(--muted);transition:.2s}
     .nav-link:hover{color:var(--text)}
@@ -62,15 +63,6 @@
     .nav-cta:hover{background:#3b78ef;transform:translateY(-1px)}
 
     .hero{padding:108px 0 88px;text-align:center}
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;
-      border:1px solid rgba(47,111,237,.28);
-      background:rgba(47,111,237,.08);
-      color:#8eaff9;padding:7px 11px;border-radius:999px;
-      font-size:11px;font-weight:700;letter-spacing:.2px;
-      margin-bottom:24px;
-    }
-    .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--blue);display:block}
     h1{
       max-width:850px;margin:0 auto;
       font-size:clamp(46px,7vw,82px);
@@ -81,7 +73,7 @@
       color:var(--muted);font-size:18px;line-height:1.7;
     }
     .hero-note{
-      margin-top:22px!important;font-size:13px!important;color:#737b87!important;
+      margin-top:22px!important;font-size:14px!important;color:#737b87!important;
     }
 
     .solutions{
@@ -90,7 +82,7 @@
     }
     .solution{
       position:relative;overflow:hidden;
-      min-height:390px;padding:34px;
+      padding:34px;
       background:linear-gradient(145deg,var(--surface),#0d1015);
       border:1px solid var(--line);border-radius:20px;
       display:flex;flex-direction:column;
@@ -106,13 +98,8 @@
       background:rgba(47,111,237,.08);filter:blur(20px);
       right:-170px;top:-170px;pointer-events:none;
     }
-    .tag{
-      width:max-content;padding:5px 9px;border-radius:5px;
-      background:rgba(47,111,237,.1);color:#8eaff9;
-      font-size:10px;font-weight:800;letter-spacing:.2px;
-    }
-    .solution h2{font-size:34px;letter-spacing:-1.5px;margin-top:24px}
-    .solution h2 span{color:var(--blue)}
+    .solution h2{font-size:34px;letter-spacing:-1.5px;font-weight:800;margin-top:0}
+    .solution h2 span{color:var(--blue-soft)}
     .solution p{color:var(--muted);font-size:16px;line-height:1.7;max-width:470px;margin-top:13px}
     .points{list-style:none;margin-top:25px;display:grid;gap:10px}
     .points li{font-size:14px;color:#d5d8de;display:flex;gap:10px;align-items:flex-start}
@@ -121,19 +108,6 @@
     .solution-link span{color:var(--blue);margin-left:6px;transition:margin .2s}
     .solution:hover .solution-link span{margin-left:10px}
 
-    .deeplinks{
-      padding:0 0 96px;
-      display:grid;grid-template-columns:1fr 1fr;gap:18px 54px;
-    }
-    .dl-list{list-style:none;margin-top:16px;display:grid;gap:9px}
-    .dl-list a{
-      display:block;padding:15px 18px;border-radius:13px;
-      background:var(--surface);border:1px solid var(--line);
-      font-size:15px;font-weight:700;color:#fff;
-      transition:border-color .2s,background .2s,transform .2s;
-    }
-    .dl-list a:hover{border-color:rgba(47,111,237,.4);background:var(--surface-2);transform:translateY(-2px)}
-    .dl-list a span{display:block;margin-top:5px;font-size:13px;font-weight:400;line-height:1.55;color:var(--muted)}
 
     .bridge{
       border-top:1px solid var(--line);
@@ -142,7 +116,7 @@
     }
     .bridge-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
     .section-label{font-size:15px;font-weight:700;letter-spacing:-.2px;color:var(--text)}
-    .closing-mail{max-width:580px;margin:22px auto 0!important;font-size:13px!important;color:#737b87!important}
+    .closing-mail{max-width:580px;margin:22px auto 0!important;font-size:14px!important;color:#737b87!important}
     .closing-mail a{color:var(--blue-soft);text-decoration:underline;text-underline-offset:3px}
     .bridge-photo{margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
     .bridge-photo img{display:block;width:100%;height:250px;object-fit:cover;object-position:center 42%}
@@ -153,9 +127,9 @@
     .flow-card{
       padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:13px;
     }
-    .flow-num{font-size:11px;color:var(--blue-soft);font-weight:800;letter-spacing:1px}
+    .flow-num{font-size:12.5px;color:var(--blue-soft);font-weight:800;letter-spacing:1px}
     .flow-card h3{font-size:18px;margin-top:10px}
-    .flow-card p{font-size:13px;line-height:1.6;margin-top:7px}
+    .flow-card p{font-size:14px;line-height:1.6;margin-top:7px}
 
     .closing{text-align:center;padding:105px 0 85px}
     .closing h2{font-size:clamp(38px,5vw,58px);letter-spacing:-2.5px;line-height:1.02}
@@ -167,7 +141,7 @@
     }
     footer{
       border-top:1px solid var(--line);
-      padding:28px 0 34px;color:#666e79;font-size:12px;
+      padding:28px 0 34px;color:#666e79;font-size:13.5px;
     }
     .footer-inner{display:flex;justify-content:space-between;gap:20px}
     .footer-links{display:flex;flex-wrap:wrap;gap:10px 20px}
@@ -177,10 +151,8 @@
       .nav-link{display:none}
       .hero{padding:80px 0 65px}
       h1{letter-spacing:-2.5px}
-      .solutions,.bridge-grid,.deeplinks{grid-template-columns:1fr}
-      .deeplinks{gap:28px;padding-bottom:64px}
+      .solutions,.bridge-grid{grid-template-columns:1fr}
       .bridge-grid{gap:40px}
-      .solution{min-height:350px}
     }
     @media(max-width:520px){
       .wrap{padding:0 20px}
@@ -200,7 +172,6 @@
       <a class="brand" href="/">Link<span class="two">2</span>Group</a>
       <div class="nav-right">
         <a class="nav-link" href="#bedrijven">Onze bedrijven</a>
-        <a class="nav-link" href="#verdiepen">Verdiepen</a>
           <a class="nav-link" href="#waarom">Waarom Link2Group</a>
         <a class="nav-cta" href="https://www.link2leads.nl/#contact" rel="noopener" target="_blank">Contact</a>
       </div>
@@ -208,7 +179,6 @@
 
     <main>
       <section class="hero">
-        <div class="eyebrow"><i></i> B2B sales infrastructure</div>
         <h1>Meer gesprekken.<br><span class="accent">Meer capaciteit.</span></h1>
         <p>Link2Group bouwt commerciële systemen voor B2B-bedrijven. Van het vinden van nieuwe prospects tot de capaciteit om ze structureel op te volgen.</p>
         <p class="hero-note">Twee bedrijven met hetzelfde doel: groei minder afhankelijk maken van toeval.</p>
@@ -216,7 +186,6 @@
 
       <section class="solutions" id="bedrijven">
         <a class="solution" href="https://www.link2leads.nl">
-          <span class="tag">Outbound leadgeneratie</span>
           <h2>Link<span>2</span>Leads</h2>
           <p>Done-for-you e-mail outreach voor B2B. Wij vinden bedrijven die passen bij je beste klanten, benaderen ze persoonlijk namens jou en leveren gekwalificeerde positieve reacties in je mailbox.</p>
           <ul class="points">
@@ -228,7 +197,6 @@
         </a>
 
         <a class="solution" href="https://www.link2talent.nl">
-          <span class="tag">Remote salescapaciteit</span>
           <h2>Link<span>2</span>Talent</h2>
           <p>Flexibele remote salescapaciteit voor B2B-bedrijven. Wij koppelen je aan Nederlandstalige setters en closers, terwijl match, contract en betaling via hetzelfde platform lopen.</p>
           <ul class="points">
@@ -238,25 +206,6 @@
           </ul>
           <div class="solution-link">Bekijk Link2Talent <span>→</span></div>
         </a>
-      </section>
-
-      <section class="deeplinks" id="verdiepen">
-        <div class="dl-col">
-          <div class="section-label">Verder lezen bij Link2Leads</div>
-          <ul class="dl-list">
-            <li><a href="https://www.link2leads.nl/cases">Klantcases met de cijfers erbij<span>Investering, looptijd, afspraken en wat er precies gemeten is</span></a></li>
-            <li><a href="https://www.link2leads.nl/kennis">Kennisbank over koude e-mail<span>Deliverability, kosten, wetgeving en wat je aan reacties mag verwachten</span></a></li>
-            <li><a href="https://www.link2leads.nl/calculator-l2l">Omzetcalculator<span>Wat een campagne bij jouw ordergrootte kan opleveren</span></a></li>
-          </ul>
-        </div>
-        <div class="dl-col">
-          <div class="section-label">Verder lezen bij Link2Talent</div>
-          <ul class="dl-list">
-            <li><a href="https://www.link2talent.nl/kennis/">Kennisbank over salescapaciteit<span>Setter of closer, remote of in dienst, en wat een interne SDR echt kost</span></a></li>
-            <li><a href="https://www.link2talent.nl/cases/">Praktijksituaties<span>De capaciteitsvraagstukken die we het vaakst tegenkomen</span></a></li>
-            <li><a href="https://www.link2talent.nl/calculator-l2t.html">Omzetcalculator<span>Wat een setter aan extra omzet kan opleveren</span></a></li>
-          </ul>
-        </div>
       </section>
 
       <section class="bridge" id="waarom">
