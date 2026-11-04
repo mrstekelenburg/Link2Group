@@ -45,3 +45,4 @@ Sitemap: https://www.link2group.nl/sitemap.xml
 
 # Machineleesbare samenvatting voor taalmodellen
 # https://www.link2group.nl/llms.txt
+# Uitgebreide versie: https://www.link2group.nl/llms-full.txt
