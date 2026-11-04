@@ -25,7 +25,7 @@ img{max-width:100%}
 .accent{color:var(--blue-soft)}
 .two{color:var(--blue)}
 /* Merknaam zoals op link2leads.nl: witte naam, blauwe schuine 2 */
-.l2b{color:var(--text);font-style:normal;white-space:nowrap}
+.l2b{color:var(--text);font-style:normal;font-weight:800;white-space:nowrap}
 .l2b i{color:#2F6FED;-webkit-text-fill-color:#2F6FED;font-style:italic;display:inline-block;padding:0 .06em 0 .01em;margin-right:-.02em}
 .btn .l2b,.btn .l2b i{color:#fff}
 .btn .l2b i{color:#BFD4FF;-webkit-text-fill-color:#BFD4FF}
@@ -39,7 +39,7 @@ nav{height:72px;display:flex;align-items:center;justify-content:space-between;bo
 .nav-link:hover{color:var(--text)}
 .lang{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
 .lang:hover{color:var(--text)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:#fff;
+.btn{border:0;cursor:pointer;font-family:inherit;line-height:1.2;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:#fff;
   padding:14px 20px;border-radius:10px;font-size:15px;font-weight:700;transition:transform .2s,background .2s}
 .btn:hover{background:#3b78ef;transform:translateY(-1px)}
 .btn-sm{padding:10px 16px;font-size:14px;border-radius:9px}
@@ -85,7 +85,7 @@ section{scroll-margin-top:20px}
 /* Combinatie */
 .steps{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
 .step{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
-.step .tag{font-size:12px;font-weight:700;letter-spacing:.6px;color:var(--dim);text-transform:uppercase}
+.step .tag{font-size:13px;font-weight:700;color:var(--dim)}
 .step h3{font-size:17px;margin-top:10px;color:var(--blue-soft);line-height:1.35}
 .step p{font-size:14px;line-height:1.6;color:var(--muted);margin-top:8px}
 .combo-cta{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
@@ -125,9 +125,9 @@ section{scroll-margin-top:20px}
 /* FAQ */
 .faq{margin-top:28px;display:grid;gap:10px;max-width:860px}
 .faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 22px}
-.faq summary{cursor:pointer;list-style:none;padding:19px 0;font-size:16.5px;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+.faq summary{cursor:pointer;list-style:none;padding:19px 30px 19px 0;font-size:16.5px;font-weight:700;line-height:1.4;display:block;position:relative}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:'+';color:var(--blue-soft);font-weight:800}
+.faq summary::after{content:'+';color:var(--blue-soft);font-weight:800;position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:20px}
 .faq details[open] summary::after{content:'−'}
 .faq details p{padding:0 0 20px;color:var(--muted);font-size:15.5px;line-height:1.75}
 .faq details p a{color:var(--blue-soft);text-decoration:underline;text-underline-offset:3px}
@@ -158,7 +158,7 @@ section{scroll-margin-top:20px}
 /* Footer */
 footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--dim);font-size:13.5px}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
-.fgrid h4{font-size:13px;color:var(--blue-soft);margin-bottom:12px}
+.fgrid h4{font-size:14px;color:var(--text);margin-bottom:12px}
 .fgrid ul{list-style:none;display:grid;gap:8px}
 .fgrid a:hover{color:#c3c8d0}
 .fgrid .about-f{line-height:1.7;max-width:320px}
@@ -182,6 +182,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--dim);fon
   nav{height:64px}
   .nav-right{gap:10px}
   .hero{padding:58px 0 30px}
+  .section{padding:52px 0}
+  .router{padding:24px 0 48px}
+  .closing{padding:60px 0 24px}
+  .contact{padding:24px 0 56px}
   .hero h1{letter-spacing:-1.8px}
   .hero .lead{font-size:16.5px}
   .card,.case,.panel{padding:22px}
