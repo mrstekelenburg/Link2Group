@@ -36,7 +36,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site.css?v=7">
+  <link rel="stylesheet" href="/assets/l2-shared.css?v=1">
+  <link rel="stylesheet" href="/assets/site.css?v=8">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -99,19 +100,17 @@
   </script>
 </head>
 <body>
+<nav aria-label="Hoofdmenu" class="l2n">
+<div class="l2n-inner">
+<a aria-label="Link2Group" class="l2n-logo" href="/"><span class="l2b">Link<i>2</i>Group</span></a>
+<ul class="l2n-links"><li><a href="#bedrijven">Onze bedrijven</a></li><li><a href="#combinatie">Combinatie</a></li><li><a href="#resultaten">Resultaten</a></li><li><a href="#over-ons">Over ons</a></li><li><a href="#faq">Vragen</a></li><li><a href="#contact">Contact</a></li></ul>
+<div class="l2l-lang l2l-lang-in-nav" role="group" aria-label="Language / Taal"><button type="button" class="l2l-lang-toggle" aria-haspopup="true" aria-expanded="false" title="Nederlands"><svg viewBox="0 0 9 6" class="l2l-flag" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg><span class="l2l-lang-lbl">NL</span><svg class="l2l-lang-chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="l2l-lang-menu"><a class="l2l-lang-btn is-active" href="/" hreflang="nl" lang="nl"><svg viewBox="0 0 9 6" class="l2l-flag" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg><span class="l2l-lang-lbl">Nederlands</span></a><a class="l2l-lang-btn" href="/en" hreflang="en" lang="en"><svg viewBox="0 0 60 30" class="l2l-flag" aria-hidden="true"><clipPath id="l2gbb"><rect width="60" height="30"/></clipPath><g clip-path="url(#l2gbb)"><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30 M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30 M60,0 0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></g></svg><span class="l2l-lang-lbl">English</span></a></div></div>
+<a class="l2n-cta" href="https://www.link2leads.nl/book?utm_source=link2group&amp;utm_medium=referral&amp;utm_campaign=nav">Gratis fitcheck</a>
+<button aria-controls="l2nMenu" aria-expanded="false" aria-label="Menu openen" class="l2n-burger" id="l2nBurger" type="button"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="l2n-menu" id="l2nMenu"><a href="#bedrijven" onclick="l2nClose()">Onze bedrijven</a><a href="#combinatie" onclick="l2nClose()">Combinatie</a><a href="#resultaten" onclick="l2nClose()">Resultaten</a><a href="#over-ons" onclick="l2nClose()">Over ons</a><a href="#faq" onclick="l2nClose()">Vragen</a><a href="#contact" onclick="l2nClose()">Contact</a><a class="l2n-mcta" href="https://www.link2leads.nl/book?utm_source=link2group&amp;utm_medium=referral&amp;utm_campaign=nav" onclick="l2nClose()">Doe de gratis fitcheck</a></div>
   <div class="wrap">
-    <nav aria-label="Hoofdmenu">
-      <a class="brand" href="/"><span class="l2b">Link<i>2</i>Group</span></a>
-      <div class="nav-right">
-        <a class="nav-link" href="#bedrijven">Onze bedrijven</a>
-        <a class="nav-link" href="#combinatie">Combinatie</a>
-        <a class="nav-link" href="#resultaten">Resultaten</a>
-        <a class="nav-link" href="#over-ons">Over ons</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="lang" href="/en" hreflang="en" lang="en">EN</a>
-        <a class="btn btn-sm" href="https://www.link2leads.nl/book?utm_source=link2group&amp;utm_medium=referral&amp;utm_campaign=nav">Gratis fitcheck</a>
-      </div>
-    </nav>
 
     <main>
       <section class="hero">
@@ -311,47 +310,54 @@
       </section>
     </main>
 
-    <footer>
-      <div class="fgrid">
-        <div>
-          <a class="brand" href="/"><span class="l2b">Link<i>2</i>Group</span></a>
-          <p class="about-f" style="margin-top:12px">Het bedrijf achter <span class="l2b">Link<i>2</i>Leads</span> en <span class="l2b">Link<i>2</i>Talent</span>. Meer verkoopgesprekken voor B2B-bedrijven in Nederland en België.</p>
-        </div>
-        <div>
-          <h4><span class="l2b">Link<i>2</i>Leads</span></h4>
-          <ul>
-            <li><a href="https://www.link2leads.nl/">Cold email uitbesteden</a></li>
+    
+  </div>
+<footer class="l2f">
+<div class="l2f-wrap">
+<div class="l2f-top">
+<div class="l2f-brand">
+<a aria-label="Link2Group" class="l2f-logo" href="/"><span class="l2b">Link<i>2</i>Group</span></a>
+<p class="l2f-tag">Het bedrijf achter <span class="l2b">Link<i>2</i>Leads</span> en <span class="l2b">Link<i>2</i>Talent</span>. Meer verkoopgesprekken voor B2B-bedrijven in Nederland en België.</p>
+<ul class="l2f-contact">
+<li><a href="mailto:info@link2leads.nl"><span class="l2f-ico"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewBox="0 0 24 24"><rect height="15" rx="2.5" width="19" x="2.5" y="4.5"></rect><path d="m3 7 8.13 5.42a1.6 1.6 0 0 0 1.74 0L21 7"></path></svg></span>info@link2leads.nl</a></li>
+<li><a href="tel:+31850805381"><span class="l2f-ico"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 16.9v2.6a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h2.6a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L6.87 9.23a16 16 0 0 0 6 6l1.13-1.13a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2.05Z"></path></svg></span>085 080 5381</a></li>
+</ul>
+</div>
+<div>
+<div class="l2f-title"><span class="l2b">Link<i>2</i>Leads</span></div>
+<ul class="l2f-links"><li><a href="https://www.link2leads.nl/">Cold email uitbesteden</a></li>
             <li><a href="https://www.link2leads.nl/#pakketten">Pakketten en prijzen</a></li>
             <li><a href="https://www.link2leads.nl/cases">Cases</a></li>
             <li><a href="https://www.link2leads.nl/kennis">Kennisbank</a></li>
-            <li><a href="https://www.link2leads.nl/book?utm_source=link2group&amp;utm_medium=referral&amp;utm_campaign=footer">Gratis fitcheck</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4><span class="l2b">Link<i>2</i>Talent</span></h4>
-          <ul>
-            <li><a href="https://www.link2talent.nl/">Remote setters en closers</a></li>
+            <li><a href="https://www.link2leads.nl/book?utm_source=link2group&amp;utm_medium=referral&amp;utm_campaign=footer">Gratis fitcheck</a></li></ul>
+</div>
+<div>
+<div class="l2f-title"><span class="l2b">Link<i>2</i>Talent</span></div>
+<ul class="l2f-links"><li><a href="https://www.link2talent.nl/">Remote setters en closers</a></li>
             <li><a href="https://www.link2talent.nl/#modellen">Modellen en prijzen</a></li>
             <li><a href="https://www.link2talent.nl/cases">Cases</a></li>
-            <li><a href="https://www.link2talent.nl/kennis">Kennisbank</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Bedrijf</h4>
-          <ul>
-            <li><a href="#over-ons">Over ons</a></li>
+            <li><a href="https://www.link2talent.nl/kennis">Kennisbank</a></li></ul>
+</div>
+<div>
+<div class="l2f-title">Bedrijf</div>
+<ul class="l2f-links"><li><a href="#over-ons">Over ons</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="https://www.link2leads.nl/algemene-voorwaarden">Algemene voorwaarden</a></li>
-            <li><a href="https://www.link2leads.nl/privacy">Privacyverklaring</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="legal">© 2026 <span class="l2b">Link<i>2</i>Group</span> · Frederik Hendrikstraat 59H, 1052 HL Amsterdam · KvK 42025671 · BTW NL869359460B01</div>
-    </footer>
-  </div>
+            <li><a href="https://www.link2leads.nl/privacy">Privacyverklaring</a></li></ul>
+</div>
+</div>
+<div class="l2f-bottom">
+<span>&copy; 2026 <span class="l2b">Link<i>2</i>Group</span>. Alle rechten voorbehouden.</span>
+<address class="l2f-legal">
+<span><span class="l2b">Link<i>2</i>Leads</span> en <span class="l2b">Link<i>2</i>Talent</span> zijn diensten van <span class="l2b">Link<i>2</i>Group</span></span>
+<span><span class="l2f-i">Frederik Hendrikstraat 59H, 1052 HL Amsterdam</span><span class="l2f-dot">&middot;</span><span class="l2f-i">KvK 42025671</span><span class="l2f-dot">&middot;</span><span class="l2f-i">BTW NL869359460B01</span></span>
+</address>
+</div>
+</div>
+</footer>
 
   <a id="l2l-fab" href="https://wa.me/31850805381?text=Hoi%20Link2Group%2C%20ik%20heb%20een%20vraag." target="_blank" rel="noopener" title="WhatsApp: 085 080 5381" aria-label="Stuur ons een WhatsApp-bericht"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.79-1.67-2.09-.18-.3-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.61-.93-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.45 0 1.45 1.06 2.85 1.21 3.05.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01c-1.75 0-3.47-.47-4.98-1.36l-.36-.21-3.7.97.99-3.62-.23-.37a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.43 9.45-9.43 2.52 0 4.89.98 6.67 2.76a9.37 9.37 0 0 1 2.77 6.68c0 5.2-4.24 9.42-9.43 9.42zM20.5 3.49A11.8 11.8 0 0 0 12.04 0C5.49 0 .16 5.33.16 11.88c0 2.09.55 4.13 1.59 5.93L0 24l6.34-1.66a11.83 11.83 0 0 0 5.69 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.42-8.42z"/></svg></a>
-  <script src="/assets/site.js?v=1" defer></script>
+  <script src="/assets/site.js?v=2" defer></script>
   <script src="/assets/contact.js" defer></script>
   <script src="/assets/chat.js" defer></script>
 </body>
