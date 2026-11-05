@@ -80,34 +80,39 @@
     var DAYS = en ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'] : ['ma', 'di', 'wo', 'do', 'vr'];
     var idx = 0;
     function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-    function addRow() {
-      var r = POOL[idx++ % POOL.length];
+    function slot() { return DAYS[Math.floor(Math.random() * DAYS.length)] + ' ' + (9 + Math.floor(Math.random() * 8)) + ':00'; }
+    function build(r, stage, anim) {
       var row = document.createElement('div');
-      row.className = 'lrow';
-      row.innerHTML = '<span class="av">' + r[0] + '</span><div class="lbody"><div class="lhead"><b>' + esc(r[1]) +
-        '</b><span class="badge st-warm">' + STAGES[0][0] + '</span></div><p>' + esc(r[2]) + '</p></div>';
+      row.className = 'lrow' + (anim ? ' drop' : '');
+      var label = stage === 2 ? STAGES[2][0] + ' · ' + slot() : STAGES[stage][0];
+      row.innerHTML = '<span class="av">' + r[0] + '</span><div class="lbody"><b>' + esc(r[1]) + '</b><p>' + esc(r[2]) +
+        '</p></div><span class="badge ' + STAGES[stage][1] + '">' + label + '</span>';
+      return row;
+    }
+    function setStage(badge, n) {
+      badge.className = 'badge ' + STAGES[n][1];
+      badge.textContent = n === 2 ? STAGES[2][0] + ' · ' + slot() : STAGES[n][0];
+    }
+    /* Direct gevuld, zodat de kaart nooit leeg of half staat. */
+    [[2, 2], [1, 1], [0, 0]].forEach(function (s) { list.appendChild(build(POOL[s[0]], s[1], false)); });
+    idx = 3;
+    function addRow() {
+      if (document.hidden) return;
+      var row = build(POOL[idx++ % POOL.length], 0, true);
       list.insertBefore(row, list.firstChild);
       var badge = row.querySelector('.badge');
-      setTimeout(function () { badge.className = 'badge ' + STAGES[1][1]; badge.textContent = STAGES[1][0]; }, 1600);
-      setTimeout(function () {
-        var day = DAYS[Math.floor(Math.random() * DAYS.length)];
-        var hour = 9 + Math.floor(Math.random() * 8);
-        badge.className = 'badge ' + STAGES[2][1];
-        badge.textContent = STAGES[2][0] + ' · ' + day + ' ' + hour + ':00';
-      }, 3300);
-      while (list.children.length > 3) {
-        var old = list.lastChild;
-        old.classList.add('leave');
-        (function (o) { setTimeout(function () { if (o.parentNode) o.parentNode.removeChild(o); }, 400); })(old);
-        break;
+      setTimeout(function () { setStage(badge, 1); }, 2200);
+      setTimeout(function () { setStage(badge, 2); }, 4400);
+      var last = list.lastElementChild;
+      if (list.children.length > 3 && last) {
+        last.classList.add('leave');
+        setTimeout(function () { if (last.parentNode) last.parentNode.removeChild(last); }, 320);
       }
     }
     var started = false;
     function start() {
       if (started) return; started = true;
-      addRow();
-      setTimeout(addRow, 900);
-      if (!reduce) setInterval(addRow, 4600);
+      if (!reduce) setInterval(addRow, 5200);
     }
     if ('IntersectionObserver' in window) {
       var lo = new IntersectionObserver(function (es) {
