@@ -128,9 +128,28 @@
     }
   }
 
-  /* 5. Navigatie krijgt een achtergrond zodra je scrolt. */
-  var nav = document.querySelector('nav');
-  function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  /* 5. Menubalk en taalkeuze, zelfde gedrag als op link2leads.nl. */
+  var nav = document.querySelector('nav.l2n'), b = document.getElementById('l2nBurger'), m = document.getElementById('l2nMenu');
+  function setMenu(o) { if (!b || !m) return; b.classList.toggle('open', o); m.classList.toggle('open', o); b.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+  window.l2nClose = function () { setMenu(false); };
+  if (b) b.addEventListener('click', function () { setMenu(!m.classList.contains('open')); });
+  function sc() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 60); }
+  window.addEventListener('scroll', sc, { passive: true }); sc();
+
+  var lw = document.querySelector('.l2l-lang'), lt = lw && lw.querySelector('.l2l-lang-toggle');
+  if (lt) {
+    lt.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      var o = lw.classList.toggle('open');
+      lt.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!lw.contains(e.target)) { lw.classList.remove('open'); lt.setAttribute('aria-expanded', 'false'); }
+    });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    setMenu(false);
+    if (lw) { lw.classList.remove('open'); lt.setAttribute('aria-expanded', 'false'); }
+  });
 })();
