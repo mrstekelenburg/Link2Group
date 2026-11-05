@@ -309,3 +309,8 @@ section[id]{scroll-margin-top:96px}
   .live .lbar{padding:13px 14px}
   .live .lfoot{padding:12px 14px}
 }
+
+/* FAQ: geen browser-focusrand bij klikken, wel een nette rand bij toetsenbordbediening */
+.faq summary:focus{outline:none}
+.faq details:has(summary:focus-visible){border-color:rgba(91,143,245,.6)}
+.faq details[open]{border-color:rgba(47,111,237,.35)}
