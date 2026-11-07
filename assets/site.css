@@ -314,3 +314,19 @@ section[id]{scroll-margin-top:96px}
 .faq summary:focus{outline:none}
 .faq details:has(summary:focus-visible){border-color:rgba(91,143,245,.6)}
 .faq details[open]{border-color:rgba(47,111,237,.35)}
+
+/* Hero met foto van de oprichters (desktop) */
+.hero-photo{display:none}
+@media(min-width:981px){
+  .hero.has-photo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:center;text-align:left}
+  .hero.has-photo h1{margin:0;font-size:clamp(40px,5vw,66px)}
+  .hero.has-photo .lead{margin:22px 0 0}
+  .hero.has-photo .cta{align-items:flex-start}
+  .hero.has-photo .stats{justify-content:flex-start;margin-left:0}
+  .hero-photo{display:flex;position:relative;justify-content:center}
+  .hero-photo::before{content:"";position:absolute;left:8%;right:8%;bottom:0;top:12%;background:radial-gradient(60% 60% at 50% 55%,rgba(47,111,237,.55),rgba(47,111,237,0) 70%);filter:blur(10px);z-index:0}
+  .hero-photo img{position:relative;z-index:1;display:block;width:100%;max-width:400px;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 82%,transparent);mask-image:linear-gradient(to bottom,#000 82%,transparent)}
+  .hero-name{position:absolute;z-index:2;right:2%;bottom:20%;background:rgba(8,9,12,.82);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:9px 14px;font-size:14px;font-weight:700;color:#F0EFED;line-height:1.25;text-align:left}
+  .hero-name small{display:block;font-size:12px;font-weight:600;color:#8A919E}
+}
+.stat [data-count]{font-variant-numeric:tabular-nums;white-space:nowrap}

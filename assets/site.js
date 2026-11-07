@@ -39,6 +39,8 @@
     var pre = el.getAttribute('data-prefix') || '';
     var suf = el.getAttribute('data-suffix') || '';
     if (reduce) { el.textContent = pre + fmt(target, dec) + suf; return; }
+    var st = el.closest('.stat'); if (st) st.style.minWidth = Math.ceil(st.getBoundingClientRect().width) + 'px';
+    el.style.display = 'inline-block'; el.style.minWidth = Math.ceil(el.getBoundingClientRect().width) + 'px';
     var t0 = null, dur = 1400;
     function step(t) {
       if (!t0) t0 = t;
