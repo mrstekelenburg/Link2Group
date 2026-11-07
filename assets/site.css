@@ -330,3 +330,27 @@ section[id]{scroll-margin-top:96px}
   .hero-name small{display:block;font-size:12px;font-weight:600;color:#8A919E}
 }
 .stat [data-count]{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Hoofdjes van Anne-Roos en Demi bij de gesprekspunten */
+.with-faces{display:inline-flex;align-items:center;gap:10px}
+.faces{display:inline-flex;flex-shrink:0}
+.faces img{width:30px;height:30px;border-radius:50%;border:2px solid #2F6FED;background:#0E1018;display:block;object-fit:cover}
+.faces img+img{margin-left:-9px}
+.closing .closing-who{display:flex;justify-content:center;margin:16px auto 0;font-size:14px;color:var(--dim)}
+.contact .sub.with-faces{display:flex}
+@media(min-width:981px){.hero.has-photo .cta .with-faces .faces{display:none}}
+@media(max-width:560px){
+  .hero h1{font-size:clamp(34px,10vw,44px);letter-spacing:-1.4px}
+  .hero .cta small.with-faces{font-size:13px}
+  .faces img{width:28px;height:28px}
+}
+/* Mobiel en tablet: compacte foto boven de kop */
+@media(max-width:980px){
+  .hero.has-photo{display:flex;flex-direction:column;padding-top:96px}
+  .hero-photo{display:flex;order:-1;position:relative;justify-content:center;margin:0 auto 14px}
+  .hero-photo::before{content:"";position:absolute;left:10%;right:10%;bottom:0;top:15%;background:radial-gradient(60% 60% at 50% 55%,rgba(47,111,237,.5),rgba(47,111,237,0) 70%);filter:blur(10px);z-index:0}
+  .hero-photo img{position:relative;z-index:1;display:block;width:230px;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+  .hero-name{position:absolute;z-index:2;left:50%;bottom:6px;transform:translateX(-50%);white-space:nowrap;background:rgba(8,9,12,.85);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:6px 11px;font-size:12.5px;font-weight:700;color:#F0EFED;line-height:1.2;text-align:center}
+  .hero-name small{display:block;font-size:11px;font-weight:600;color:#8A919E}
+  .hero.has-photo .cta .with-faces .faces{display:none}
+}
