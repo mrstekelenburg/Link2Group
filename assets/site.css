@@ -317,7 +317,7 @@ section[id]{scroll-margin-top:96px}
 
 /* Hero met foto van de oprichters (desktop) */
 .hero-photo{display:none}
-@media(min-width:0px){
+@media(min-width:601px){
   .hero.has-photo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:center;text-align:left}
   .hero.has-photo h1{margin:0;font-size:clamp(40px,5vw,66px)}
   .hero.has-photo .lead{margin:22px 0 0}
@@ -347,7 +347,7 @@ section[id]{scroll-margin-top:96px}
 /* Mobiel en tablet: hoofdjes met handgeschreven regel onder de kop (zoals L2L en L2T) */
 .hb-mob{display:none}
 @keyframes hbBob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
-@media(max-width:0px){
+@media(max-width:600px){
   .hero-photo{display:none!important}
   .hb-mob{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:16px auto 0;color:#7EB3FF;text-decoration:none;font-family:'Caveat',cursive;font-size:min(22px,calc((100vw - 120px) / 13));line-height:1.05}
   .hb-faces{display:flex;flex-shrink:0}
@@ -392,7 +392,7 @@ section[id]{scroll-margin-top:96px}
 }
 
 /* Kop en foto altijd naast elkaar, ook op halfscreen en mobiel (zoals L2L en L2T, 25-11-2026) */
-@media(max-width:980px){
+@media(min-width:601px) and (max-width:980px){
   .hero.has-photo{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:12px}
   .hero.has-photo h1{font-size:clamp(23px,6.3vw,52px)!important;letter-spacing:-.03em}
   .hero.has-photo .lead{font-size:clamp(13px,3.5vw,17px);line-height:1.5;margin-top:12px}
